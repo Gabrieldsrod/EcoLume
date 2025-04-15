@@ -84,6 +84,12 @@ html {
     padding: 20px;
     margin-top: 40px;
   }
+  footer a.button {
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+  }
   .logo {
     height: 50px;
     margin-right: 15px;
