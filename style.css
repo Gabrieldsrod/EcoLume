@@ -68,6 +68,18 @@ ul li {
   margin-bottom: 8px;
 }
 
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 400;
+  
+
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -116,5 +128,4 @@ footer a.button {
   margin-right: 15px;
   vertical-align: middle;
   border-radius: 50%;
-
 }

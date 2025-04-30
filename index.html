@@ -2,57 +2,89 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eco Lume - Hub</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background: #013b03;
-      color: #fafafa;
-    }
-
-    h1 {
-      margin-bottom: 20px;
-    }
-
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .button {
-      background-color: #4caf50;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      text-align: center;
-      transition: background-color 0.3s ease;
-      width: 200px;
-    }
-
-    .button:hover {
-      background-color: #3d8b4a;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco Lume</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Opções site EcoLume</h1>
-  <div class="button-container">
-    <a href="v1/ecolumev1.html" class="button">Versão 1</a>
-    <a href="v2/ecolumev2.html" class="button">Versão 2</a>
-    <a href="v3/ecolumev3.html" class="button">Versão 3 - IA usada</a>
-  </div>
+
+  <header>
+    <img src="ecolumelogo.jpg" alt="Logo Eco Lume" class="logo">
+    <h1>Eco Lume</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#funcionamento">Funcionamento</a>
+      <a href="#vantagens">Vantagens</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2><i class="fas fa-leaf icon"></i>Sobre o Projeto</h2>
+      <p>Eco Lume é uma solução sustentável no combate ao mosquito <em>Aedes aegypti</em>, vetor da dengue, zika e
+        chikungunya. Utilizando uma armadilha luminosa com lâmpada UV energizada por um painel solar, o dispositivo
+        promove saúde pública com tecnologia limpa e acessível.</p>
+    </section>
+
+    <section id="funcionamento">
+      <h2><i class="fas fa-lightbulb icon"></i>Como Funciona</h2>
+      <p>O dispositivo atrai os mosquitos por meio de luz UV, os captura em uma câmara interna, e é alimentado por um
+        pequeno painel solar, garantindo autonomia e baixo custo operacional.</p>
+    </section>
+
+    <section id="vantagens">
+      <h2><i class="fas fa-solar-panel icon"></i>Vantagens</h2>
+      <ul>
+        <li>Independente da rede elétrica: Ideal para áreas remotas ou com fornecimento instável de energia.</li>
+        <li>Autonomia energética com energia solar: Funciona de forma contínua e sustentável, aproveitando uma fonte limpa e renovável.</li>
+        <li>Sem uso de produtos químicos: Seguro para o meio ambiente e para a saúde humana, evitando contaminações.</li>
+        <li>Fácil instalação: Design prático e intuitivo, permitindo que qualquer pessoa configure o dispositivo rapidamente.</li>
+        <li>Aplicável em zonas urbanas e rurais: Versátil e eficiente em diferentes contextos, atendendo às necessidades de diversas comunidades.</li>
+      </ul>
+    </section>
+
+    <section id="painel-solar">
+      <h2><i class="fas fa-sun icon"></i>Por que um Painel Solar?</h2>
+      <p>A utilização de painéis solares na nossa armadilha para mosquitos da dengue é uma escolha estratégica que une eficiência, autonomia e sustentabilidade. Ao adotar a energia fotovoltaica, garantimos que o dispositivo funcione de forma contínua e independente da rede elétrica, o que permite sua instalação em locais remotos, áreas rurais ou regiões com fornecimento instável de energia — justamente onde o controle do mosquito é mais necessário.</p>
+      <p>Além Além disso, a energia solar é uma fonte limpa e silenciosa, que não emite poluentes nem ruídos, tornando-a ideal para tecnologias que operam em áreas residenciais e ambientais sensíveis. Isso reduz o impacto ecológico da solução e evita a geração de resíduos ou consumo de combustíveis fósseis.</p>
+      <p>Outro ponto importante é a economia a longo prazo: como o sol é uma fonte gratuita e abundante, o uso do painel solar elimina gastos com eletricidade, tornando o projeto mais viável financeiramente, especialmente em implantações em larga escala.</p>
+      <p>Em resumo, o uso da energia solar potencializa a eficácia da armadilha, amplia sua aplicabilidade e reforça o compromisso com práticas sustentáveis no combate à dengue.</p>
+    </section>
+
+    <section id="impacto">
+      <h2><i class="fas fa-globe icon"></i>Impacto Esperado</h2>
+      <p>O Eco Lume visa reduzir a população de mosquitos vetores de doenças, contribuindo para a saúde pública e
+        qualidade de vida. Espera-se que a adoção em larga escala diminua os casos de dengue, zika e chikungunya,
+        promovendo um ambiente mais seguro e saudável.</p>
+      <p>Além disso, o projeto busca conscientizar a população sobre a importância do controle de vetores e o uso de
+        tecnologias sustentáveis, incentivando práticas de prevenção e cuidado com o meio ambiente.</p>
+    </section>
+
+    <section id="prototipo">
+      <h2><i class="fas fa-cogs icon"></i>Protótipo</h2>
+      <p>O protótipo do Eco Lume foi desenvolvido Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, velit fugit sequi, magni optio ducimus quia, quae libero aspernatur tempore accusantium. Id repellat aut quod tempore dolorum reiciendis quae alias!.</p>
+      <img src="../prototipo.jpg" alt="Protótipo Eco Lume" class="prototipo">
+    </section>
+
+    <section id="contato">
+      <h2><i class="fas fa-envelope icon"></i>Entre em Contato</h2>
+      <form action="#">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="mensagem" rows="5" placeholder="Sua mensagem..." required></textarea>
+        <button type="submit" class="button">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Eco Lume. Todos os direitos reservados.</p>
+  </footer>
+
 </body>
 
 </html>
