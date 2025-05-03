@@ -168,7 +168,6 @@ footer p {
 .question {
   width: 30dvh;
   position: relative;
-  top: 60px;
   margin-bottom: 20px;
 }
 /* Painel solar */
@@ -203,7 +202,6 @@ footer p {
   height: auto;
   border-radius: 10px;
   position: relative;
-  top: 60px;
 }
 
 /* Impacto */
