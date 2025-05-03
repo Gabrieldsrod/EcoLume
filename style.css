@@ -13,27 +13,30 @@ body {
 
 /* Cabeçalho */
 header {
-  background-color: #1d4031;
-  color: white;
-  padding: 25px 20px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background-color: #1d4031; /* Cor de fundo do cabeçalho */
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Espaça os elementos horizontalmente */
+  text-align: center; /* Centraliza o texto dos elementos */
+  padding: 20px;
 }
 
 header h1 {
+  font-size: 2rem; /* Ajuste o tamanho do título principal */
   margin: 0;
-  font-size: 26px;
-  display: flex;
-  align-items: center;
+  color: #f4a900; /* Opcional: cor do título */
 }
 
-.logo {
-  height: 50px;
-  margin-right: 15px;
-  vertical-align: middle;
-  border-radius: 50%;
+header h2 {
+  font-size: 1.2rem; /* Ajuste o tamanho do subtítulo */
+  margin: 0;
+  color: #4fb68e; /* Opcional: cor do subtítulo */
+}
+
+header .logo {
+  width: 80px; /* Ajuste o tamanho do logo conforme necessário */
+  height: auto;
+  border-radius: 50%; /* Opcional: deixa o logo circular */
 }
 
 nav {
@@ -110,7 +113,7 @@ li {
   position: relative;
   padding-left: 20px;
   margin-bottom: 10px;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: justify;
 }
 
@@ -237,4 +240,14 @@ footer p {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   object-fit: cover;
   object-position: center 90%;
+}
+
+.comunidade {
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  object-position: center 55%;
 }
