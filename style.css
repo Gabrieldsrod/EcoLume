@@ -1,4 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
+  font-size: 1.1rem;
   scroll-behavior: smooth;
 }
 
@@ -68,12 +73,22 @@ ul li {
   margin-bottom: 8px;
 }
 
+li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+
+  font-size: 1.15rem;
+  text-align: justify;
+}
+
 p {
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: justify;
+  text-indent: 40px;
 
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   color: #333;
   font-weight: 400;
   
