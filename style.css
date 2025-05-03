@@ -1,4 +1,4 @@
-
+/* Configurações globais */
 html {
   font-size: 1.1rem;
   scroll-behavior: smooth;
@@ -11,6 +11,7 @@ body {
   color: #1d4031;
 }
 
+/* Cabeçalho */
 header {
   background-color: #1d4031;
   color: white;
@@ -28,6 +29,13 @@ header h1 {
   align-items: center;
 }
 
+.logo {
+  height: 50px;
+  margin-right: 15px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
 nav {
   margin-top: 10px;
 }
@@ -39,6 +47,17 @@ nav a {
   font-weight: 600;
 }
 
+/* Imagem do cabeçalho */
+.img-header {
+  border-top: #0e250b 3px solid;
+  width: 100dvh;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 95%;
+  box-shadow: #333 0px 0px 10px;
+}
+
+/* Estilo principal */
 main {
   max-width: 1000px;
   margin: auto;
@@ -53,6 +72,20 @@ section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+a {
+  color: #32785d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+b {
+  color: #2a5e37;
+  font-weight: bold;
+}
+
 h2 {
   color: #32785d;
 }
@@ -62,6 +95,7 @@ h2 {
   color: #f4a900;
 }
 
+/* Listas */
 ul {
   padding-left: 20px;
 }
@@ -74,22 +108,21 @@ li {
   position: relative;
   padding-left: 20px;
   margin-bottom: 10px;
-
   font-size: 1.1rem;
   text-align: justify;
 }
 
-
+/* Parágrafos */
 p {
   line-height: 1.6;
   margin-bottom: 20px;
   text-align: justify;
   text-indent: 40px;
-
   font-size: 1rem;
   font-weight: 400;
 }
 
+/* Formulários */
 form {
   display: flex;
   flex-direction: column;
@@ -115,6 +148,7 @@ textarea {
   cursor: pointer;
 }
 
+/* Footer */
 footer {
   background-color: #1d4031;
   color: white;
@@ -125,40 +159,19 @@ footer {
 
 footer p {
   text-indent: 0;
-  margin-bottom: 0;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #f4a900;
-  
   margin: 0;
   line-height: 1.4;
   font-size: 0.9rem;
-  text-indent: 0;
-  
+  color: #f4a900;
 }
 
-.logo {
-  height: 50px;
-  margin-right: 15px;
-  vertical-align: middle;
-  height: 50px;
-  margin-right: 15px;
-  vertical-align: middle;
-  border-radius: 50%;
+.question {
+  width: 30dvh;
+  position: relative;
+  top: 60px;
+  margin-bottom: 20px;
 }
-
-.img-header {
-  border-top: #0e250b 3px solid;
-  width: 100%; 
-  height: 300px; 
-
-  object-fit: cover; 
-  object-position: center 95%;
-  box-shadow: #333 0px 0px 10px;  
-}
-
+/* Painel solar */
 .painel-solar-container .texto-e-imagem {
   display: flex;
   align-items: flex-start;
@@ -169,7 +182,13 @@ footer p {
   display: flex;
   align-items: flex-start;
   gap: 20px;
+}
 
+.texto-e-imagem-impacto {
+  display: flex;
+  flex-direction: column; /* Alinha os elementos em uma coluna */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  gap: 20px; /* Espaçamento entre os elementos */
 }
 
 .texto {
@@ -180,16 +199,28 @@ footer p {
 }
 
 .painel-solar-container .painel-solar {
-  width: 50%;
-  height: auto; 
+  width: 35dvh;
+  height: auto;
   border-radius: 10px;
   position: relative;
-  top: 120px;
-  
+  top: 60px;
 }
 
-.impacto {
-  position: relative;
+/* Impacto */
+.impacto, .aedes {
+  position: center;
   top: 60px;
-  width: 50%;
+  width: 35dvh;
+}
+
+/* Energia renovável */
+.energia-renovavel {
+  top: 60px;
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  object-position: center 90%;
 }
