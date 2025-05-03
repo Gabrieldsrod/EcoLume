@@ -75,7 +75,7 @@ section {
 }
 
 a {
-  color: #32785d;
+  color: #4fb68e;
   text-decoration: none;
   font-weight: bold;
 }
@@ -154,9 +154,14 @@ textarea {
 footer {
   background-color: #1d4031;
   color: white;
-  text-align: center;
+  text-align: center; /* Centraliza o texto horizontalmente */
   padding: 10px 20px;
   margin-top: 20px;
+  display: flex; /* Ativa o Flexbox */
+  flex-direction: column; /* Garante que os elementos sejam empilhados verticalmente */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  justify-content: center; /* Centraliza os elementos verticalmente */
+
 }
 
 footer p {
@@ -196,7 +201,7 @@ footer p {
   flex: 1;
   font-size: 1.2rem;
   text-align: justify;
-  margin-top: 20px;
+
 }
 
 .painel-solar-container .painel-solar {
@@ -206,11 +211,20 @@ footer p {
   position: relative;
 }
 
+.mosquito-n {
+  width: 40dvh;
+  height: auto;
+  position: relative;
+  top: 44px;
+}
+
 /* Impacto */
-.impacto, .aedes {
-  position: center;
-  top: 60px;
-  width: 35dvh;
+.impacto {
+  width: auto; /* Ajusta a largura automaticamente */
+  height: 100%; /* Faz a altura da imagem ocupar 100% do contêiner pai */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+  border-radius: 10px; /* Opcional: bordas arredondadas */
+  margin-top: 20px;
 }
 
 /* Energia renovável */
