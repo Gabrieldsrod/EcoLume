@@ -251,3 +251,82 @@ footer p {
   object-fit: cover;
   object-position: center 55%;
 }
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Organiza os elementos em uma coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    text-align: center; /* Centraliza o texto */
+    gap: 10px; /* Espaçamento entre os elementos */
+  }
+
+  header .logo {
+    margin-right: 0; /* Remove o deslocamento da logo */
+    margin-bottom: 10px; /* Adiciona espaçamento abaixo da logo */
+  }
+
+  header h1 {
+    font-size: 1.8rem; /* Reduz o tamanho do título principal */
+  }
+
+  header h2 {
+    font-size: 1rem; /* Reduz o tamanho do subtítulo */
+  }
+
+  .img-header {
+    height: 200px; /* Ajusta a altura da imagem para telas menores */
+  }
+
+  main {
+    padding: 20px; /* Reduz o padding do conteúdo principal */
+  }
+
+  section {
+    padding: 20px; /* Reduz o padding das seções */
+  }
+
+  .texto-e-imagem {
+    flex-direction: column; /* Organiza texto e imagem em uma coluna */
+    align-items: center; /* Centraliza os elementos */
+  }
+
+  .texto {
+    text-align: justify; /* Mantém o texto justificado */
+  }
+
+  .mosquito-n {
+    top: 0; /* Remove o deslocamento superior */
+    width: 80%; /* Ajusta a largura da imagem do mosquito */
+  }
+
+  .impacto {
+    width: 100%; /* Faz a imagem ocupar toda a largura */
+    height: 200px; /* Define uma altura fixa para telas menores */
+  }
+
+  .painel-solar-container .texto-e-imagem {
+    flex-direction: column; /* Organiza texto e imagem em uma coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .painel-solar-container .painel-solar {
+    width: 80%; /* Ajusta a largura da imagem para telas menores */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 20px auto; /* Centraliza a imagem horizontalmente e adiciona espaçamento */
+  }
+
+  .energia-renovavel {
+    width: 100%; /* Faz as imagens ocuparem toda a largura */
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  footer {
+    padding: 15px; /* Reduz o padding do footer */
+  }
+
+  footer p {
+    font-size: 0.8rem; /* Reduz o tamanho do texto no footer */
+  }
+}
