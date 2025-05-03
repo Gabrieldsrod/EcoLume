@@ -129,3 +129,27 @@ footer a.button {
   vertical-align: middle;
   border-radius: 50%;
 }
+
+.img-header {
+  border-top: #0e250b 3px solid;
+  width: 100%; 
+  height: 200px; 
+
+  object-fit: cover; 
+  object-position: center 80%;
+  box-shadow: #333 0px 0px 10px;  
+}
+
+.painel-solar-container .texto-e-imagem {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.painel-solar-container .painel-solar {
+  width: 50%;
+  height: auto; 
+  border-radius: 10px;
+  margin-top: 30px;
+  
+}
