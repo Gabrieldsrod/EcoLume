@@ -5,10 +5,10 @@ fetch(url)
     .then(res => res.json())
     .then(dados => {
         const ultima = dados[0];
-        const voltagem = parseFloat(ultima.voltagem);
+        const tensao = parseFloat(ultima.tensao);
 
         // Converte voltagem para porcentagem (assumindo 13.5V = 100%)
-        const porcentagem = Math.min(100, Math.round((voltagem / 13.5) * 100));
+        const porcentagem = Math.min(100, Math.round((tensao / 13.5) * 100));
 
         const nivel = document.getElementById("nivel");
         const texto = document.getElementById("texto");
@@ -25,7 +25,7 @@ fetch(url)
         }
 
 
-        texto.textContent = `Carga da bateria: ${porcentagem}% (${voltagem.toFixed(2)} V)`;
+        texto.textContent = `Carga da bateria: ${porcentagem}% (${tensao.toFixed(2)} V)`;
     })
     .catch(err => {
         document.getElementById("texto").textContent = "Erro ao carregar dados";
