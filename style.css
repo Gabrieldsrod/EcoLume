@@ -176,9 +176,10 @@ footer p {
 }
 
 .question {
-  width: 30dvh;
+  width: 16dvh;
   position: relative;
   margin-bottom: 20px;
+  margin-top: 0;
 }
 /* Painel solar */
 .painel-solar-container .texto-e-imagem {
@@ -318,8 +319,31 @@ footer p {
     padding: 20px; /* Reduz o padding do conteúdo principal */
   }
 
+  p {
+    text-align: left !important;
+    text-indent: 0 !important;
+    line-height: 1.8;
+    margin-bottom: 24px;
+  }
+
+  li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  
+  ul {
+    padding-left: 16px;
+  }
+
+  h2, h3 {
+    font-size: 1.2rem;
+    margin-top: 30px;
+    color: #265c49;
+  }
+
   section {
-    padding: 20px; /* Reduz o padding das seções */
+    padding: 20px 16px; /* Reduz o padding das seções */
   }
 
   .texto-e-imagem {
@@ -329,8 +353,13 @@ footer p {
 
   .texto {
     text-align: justify; /* Mantém o texto justificado */
+    font-size: 1rem; /* Ajusta o tamanho do texto */
   }
 
+  .question {
+    width: 20dvh; /* Faz a imagem ocupar toda a largura */
+    height: auto; /* Mantém a proporção da imagem */
+  }
   .mosquito-n {
     top: 0; /* Remove o deslocamento superior */
     width: 80%; /* Ajusta a largura da imagem do mosquito */
