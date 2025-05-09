@@ -146,7 +146,7 @@ textarea {
 .button {
   background-color: #32785d;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border: none;
   border-radius: 6px;
   font-weight: bold;
@@ -293,7 +293,7 @@ footer p {
 .accordion {
   background-color: white;
   cursor: pointer;
-  padding: 30px;
+  padding: 15px;
   width: 100%;
   border: none;
   text-align: left;
@@ -329,7 +329,7 @@ footer p {
 
 .panel {
   display: none;
-  padding: 0 30px 30px 30px;
+  padding: 0 30px 0 30px;
   /* border-top: 1px solid #ccc; */
   animation: fadeIn 0.3s ease-in-out;
 }
@@ -371,7 +371,7 @@ footer p {
 
   p {
     text-align: left !important;
-    text-indent: 10px !important;
+    text-indent: 20px !important;
 
     line-height: 1.8;
     margin-top: 10px;
