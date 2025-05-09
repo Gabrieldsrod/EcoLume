@@ -370,11 +370,11 @@ footer p {
   }
 
   p {
-    text-align: left !important;
+    text-align: justify !important;
     text-indent: 20px !important;
-
     line-height: 1.8;
-    margin-top: 10px;
+    margin: 10px;
+    margin-top: 0;
     margin-bottom: 15px;
     font-size: 1rem;
   }
@@ -403,6 +403,7 @@ footer p {
   .accordion {
     padding: 15px; /* Reduz o padding do accordion */
     font-size: 1rem; /* Ajusta o tamanho da fonte do accordion */
+    margin-bottom: 10px; 
   }
 
   .panel {
