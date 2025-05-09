@@ -1,13 +1,13 @@
 const url = "https://6817c88e5a4b07b9d1cd3de9.mockapi.io/api/vi1/bateria?sortBy=createdAt&order=desc";
 
 fetch(url)
-    .then(res => res.json())
-    .then(dados => {
-        const ultima = dados[0];
-        const voltagem = parseFloat(ultima.voltagem);
+  .then(res => res.json())
+  .then(dados => {
+    const ultima = dados[0];
+    const tensao = parseFloat(ultima.tensao);
 
-        // Converte voltagem para porcentagem (assumindo 13.5V = 100%)
-        const porcentagem = Math.min(100, Math.round((voltagem / 13.5) * 100));
+    // Converte voltagem para porcentagem (assumindo 13.5V = 100%)
+    const porcentagem = Math.min(100, Math.round((tensao / 13.5) * 100));
 
     const nivel = document.getElementById("nivel");
     const texto = document.getElementById("texto");
@@ -21,11 +21,15 @@ fetch(url)
     } else {
       nivel.style.backgroundColor = "green";
     }
+    texto.innerHTML = "Bateria: " + porcentagem + "%" + " (" + tensao + " V)";
 
+  });
 
-        texto.textContent = `Carga da bateria: ${porcentagem}% (${voltagem.toFixed(2)} V)`;
-    })
-    .catch(err => {
-        document.getElementById("texto").textContent = "Erro ao carregar dados";
-        console.error(err);
+  const acc = document.querySelectorAll(".accordion");
+  acc.forEach(button => {
+    button.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
     });
+  });

@@ -176,9 +176,9 @@ footer p {
 }
 
 .question {
-  width: 16dvh;
+  width: 20dvh;
   position: relative;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   margin-top: 0;
 }
 /* Painel solar */
@@ -289,6 +289,56 @@ footer p {
   margin-top: 20px;
 }
 
+/* Accordion */
+.accordion {
+  background-color: white;
+  cursor: pointer;
+  padding: 30px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion:hover {
+  background-color: #f0f0f0;
+}
+
+.accordion h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion.active .arrow {
+  transform: rotate(180deg);
+}
+
+.panel {
+  display: none;
+  padding: 0 30px 30px 30px;
+  /* border-top: 1px solid #ccc; */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 /* Estilos responsivos para dispositivos móveis */
 @media (max-width: 768px) {
   header {
@@ -321,15 +371,18 @@ footer p {
 
   p {
     text-align: left !important;
-    text-indent: 0 !important;
+    text-indent: 10px !important;
+
     line-height: 1.8;
-    margin-bottom: 24px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
   }
 
   li {
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   
   ul {
@@ -338,12 +391,28 @@ footer p {
 
   h2, h3 {
     font-size: 1.2rem;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: #265c49;
   }
 
   section {
     padding: 20px 16px; /* Reduz o padding das seções */
+  }
+
+  .accordion {
+    padding: 15px; /* Reduz o padding do accordion */
+    font-size: 1rem; /* Ajusta o tamanho da fonte do accordion */
+  }
+
+  .panel {
+    padding: 0 15px 15px 15px; /* Reduz o padding do painel */
+  }
+
+  .question {
+    width: 100%; /* Faz a imagem ocupar toda a largura */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 0; /* Remove o deslocamento superior */
   }
 
   .texto-e-imagem {
