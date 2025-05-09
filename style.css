@@ -406,6 +406,11 @@ footer p {
     margin-bottom: 10px; 
   }
 
+  .accordion:hover {
+    background-color: transparent;
+  }
+}
+
   .panel {
     padding: 0 15px 15px 15px; /* Reduz o padding do painel */
   }
