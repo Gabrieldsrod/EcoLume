@@ -2,6 +2,7 @@
 html {
   font-size: 1.1rem;
   scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -174,7 +175,7 @@ footer p {
   color: #f4a900;
 }
 
-.question {
+question {
   width: 20dvh;
   position: relative;
   /* margin-bottom: 20px; */
@@ -302,10 +303,12 @@ footer p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .accordion:hover {
   background-color: #f0f0f0;
+  transform: scale(1.02);
 }
 
 .accordion h2 {
@@ -327,10 +330,19 @@ footer p {
 }
 
 .panel {
-  display: none;
-  padding: 0 30px 0 30px;
-  /* border-top: 1px solid #ccc; */
-  animation: fadeIn 0.3s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.accordion.active + .panel {
+  max-height: 500px; /* Ajuste conforme necessário */
+  opacity: 1;
+}
+
+.accordion + .panel {
+  display: block; /* Garante que o painel esteja visível */
 }
 
 @keyframes fadeIn {
@@ -402,16 +414,10 @@ footer p {
   .accordion {
     padding: 15px; /* Reduz o padding do accordion */
     font-size: 1rem; /* Ajusta o tamanho da fonte do accordion */
-    margin-bottom: 10px; 
   }
 
   .accordion:hover {
     background-color: transparent;
-  }
-}
-
-  .panel {
-    padding: 0 15px 15px 15px; /* Reduz o padding do painel */
   }
 
   .question {
