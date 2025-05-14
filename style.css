@@ -175,7 +175,7 @@ footer p {
   color: #f4a900;
 }
 
-question {
+.question {
   width: 20dvh;
   position: relative;
   /* margin-bottom: 20px; */
@@ -418,6 +418,11 @@ question {
 
   .accordion:hover {
     background-color: transparent;
+  }
+
+  .panel {
+    padding: 0 15px; /* Adiciona padding ao painel */
+    font-size: 1rem; /* Ajusta o tamanho da fonte do painel */
   }
 
   .question {

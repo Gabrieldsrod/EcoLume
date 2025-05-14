@@ -22,7 +22,10 @@ fetch(url)
       nivel.style.backgroundColor = "green";
     }
     texto.innerHTML = "Bateria: " + porcentagem + "%" + " (" + tensao + " V)";
-
+  })
+  .catch(err => {
+    console.error("Erro ao buscar dados:", err);
+    document.getElementById("texto").textContent = "Erro ao carregar dados.";
   });
 
 // Adicionando animação para abrir e fechar os accordions no JavaScript
