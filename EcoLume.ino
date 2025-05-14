@@ -15,8 +15,8 @@ unsigned long ultimoEnvio = 0;                 // armazena o tempo do último en
 const unsigned long intervaloEnvio = 3600000;  // 1 hora em milissegundos
 
 // Função map para float
-float mapFloat(float x, float in_min, float in_max, float out_min, float out_max) {
-  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+float converterTensao(float leitura, float entradaMin, float entradaMax, float saidaMin, float saidaMax) {
+  return (leitura - entradaMin) * (saidaMax - saidaMin) / (entradaMax - entradaMin) + saidaMin;
 }
 
 // Inicializa NTP
@@ -33,7 +33,7 @@ String getDataHoraISO() {
   struct tm timeinfo;
   getLocalTime(&timeinfo);
   char buffer[30];
-  strftime(buffer, sizeof(buffer), "%Y-%m-%dT%H:%M:%S", &timeinfo);
+  strftime(buffer, sizeof(buffer), "%Y-%m-%dT%H:%M:%S", &timeinfo); 
   return String(buffer);
 }
 
@@ -53,15 +53,15 @@ void setup() {
     Serial.print(".");
   }
   Serial.println("\nWi-Fi conectado.");
-  configurarRelogioNTP();
+  configurarRelogioNTP();  // Configura o relógio NTP com o fuso horário correto
 }
 
 void loop() {
-  struct tm timeinfo;
-  getLocalTime(&timeinfo);
-  int horaAtual = timeinfo.tm_hour;
+  struct tm timeinfo;  // Estrutura para armazenar informações de data e hora
+  getLocalTime(&timeinfo);  // Obtém a hora local
+  int horaAtual = timeinfo.tm_hour;  // Obtém a hora atual (0-23)
 
-  bool horarioPermitido = (horaAtual >= 19 || horaAtual < 2);
+  bool horarioPermitido = (horaAtual >= 19 || horaAtual < 2); // Permite funcionamento entre 19h e 2h
 
   if (horarioPermitido) {
     digitalWrite(pinoVent, HIGH);
@@ -73,9 +73,9 @@ void loop() {
     digitalWrite(pinoLED2, LOW);
   }
 
-  unsigned long tempoAtual = millis();
-  if (tempoAtual - ultimoEnvio >= intervaloEnvio || ultimoEnvio == 0) {
-    ultimoEnvio = tempoAtual;
+  unsigned long tempoAtual = millis();    // Retorna o tempo em milissegundos desde a ativação do circuito
+  if (tempoAtual - ultimoEnvio >= intervaloEnvio || ultimoEnvio == 0) {   // Verifica se é hora de enviar os dados
+    ultimoEnvio = tempoAtual; // Atualiza o tempo do último envio com o tempo atual     
 
     int leituraADC = analogRead(pinoAnalogico);
     float tensaoDivisor = mapFloat(leituraADC, 0, 4095, 0.0, 3.3);
@@ -91,11 +91,12 @@ void loop() {
     if (WiFi.status() == WL_CONNECTED) {
       HTTPClient http;
       http.begin(endpoint);
-      http.addHeader("Content-Type", "application/json");
+      http.addHeader("Content-Type", "application/json"); // Define o tipo de conteúdo como JSON
 
-      String corpoJson = "{\"tensao\": " + String(tensaoBateria, 2) + ", \"timestamp\": \"" + horario + "\"}";
+      String corpoJson = "{\"tensao\": " + String(tensaoBateria, 2) + ", \"timestamp\": \"" + horario + "\"}";  // Cria o corpo JSON contendo a tensão e o timestamp
+      Serial.println("Corpo JSON: " + corpoJson); // Imprime o corpo JSON para depuração
 
-      int httpResponseCode = http.POST(corpoJson);
+      int httpResponseCode = http.POST(corpoJson); // Envia o POST com o corpo JSON
       if (httpResponseCode > 0) {
         Serial.println("Enviado com sucesso!");
       } else {
@@ -103,7 +104,7 @@ void loop() {
         Serial.println(httpResponseCode);
       }
 
-      http.end();
+      http.end(); // Libera os recursos utilizados pela requisição HTTP
     }
   }
 
